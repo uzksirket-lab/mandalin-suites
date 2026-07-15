@@ -327,19 +327,18 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             e.stopPropagation(); 
             
-            const email = document.getElementById('admin-user').value;
-            const pass = document.getElementById('admin-pass').value;
+            // .trim() ile olası görünmez boşlukları temizliyoruz
+            const email = document.getElementById('admin-user').value.trim();
+            const pass = document.getElementById('admin-pass').value.trim();
 
-            // Şifreyi kodda kontrol etmiyoruz! Google'a soruyoruz:
             firebase.auth().signInWithEmailAndPassword(email, pass)
                 .then((userCredential) => {
-                    // Şifre doğruysa Google onay verir
                     localStorage.setItem('mandalinAdmin', 'true');
                     window.location.href = 'admin.html';
                 })
                 .catch((error) => {
-                    // Şifre yanlışsa hata fırlatır
-                    alert('Hatalı e-posta veya şifre! Lütfen tekrar deneyin.');
+                    // Hatanın asıl sebebini doğrudan popup uyarısına yazdırıyoruz:
+                    alert('Giriş Başarısız!\nHata Kodu: ' + error.code + '\nDetay: ' + error.message);
                     console.error("Giriş hatası:", error.message);
                 });
         });
