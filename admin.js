@@ -1,6 +1,6 @@
 // GÜVENLİK KONTROLÜ (Kalıcı Giriş / Beni Hatırla)
 if (localStorage.getItem('mandalinAdmin') !== 'true') {
-    alert("Yetkisiz erişim! Lütfen ana sayfadan giriş yapınız.");
+    alert("Yetcisiz erişim! Lütfen ana sayfadan giriş yapınız.");
     window.location.href = 'index.html';
 }
 
@@ -24,9 +24,19 @@ const db = firebase.firestore();
 const apartList = ["Apart 1", "Apart 2", "Apart 3", "Apart 4", "Apart 5", "Apart 6", "Apart 7"];
 let globalApprovedList = []; // Veritabanından çekilen onaylı rezervasyonları burada tutacağız
 
-// Sayfa Yüklendiğinde Verileri Gerçek Zamanlı Dinlemeye Başla
+// Sayfa Yüklendiğinde ÖNCE Giriş Kontrolü Yap, Onay Gelince Dinlemeyi Başlat
 document.addEventListener('DOMContentLoaded', () => {
-    listenToFirebase();
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            console.log("Firebase Girişi Başarıyla Doğrulandı:", user.email);
+            // Sadece ve sadece giriş başarılıysa veritabanını dinlemeye başla!
+            listenToFirebase();
+        } else {
+            console.warn("Firebase oturumu bulunamadı! Ana sayfaya yönlendiriliyorsunuz...");
+            localStorage.removeItem('mandalinAdmin');
+            window.location.href = 'index.html';
+        }
+    });
 });
 
 // --- 2. FIREBASE REALTIME DİNLEME ---
@@ -42,6 +52,8 @@ function listenToFirebase() {
         
         loadApprovedBookings(); // Tabloyu güncelle
         loadCalendars();        // Takvimleri güncelle ve renkleri yenile
+    }, (error) => {
+        console.error("Takvim verileri çekilemedi (Yetki Hatası):", error);
     });
 
     // B) Gelen (Beklemede Olan) Rezervasyon İsteklerini Dinle
@@ -54,20 +66,9 @@ function listenToFirebase() {
             requests.push(data);
         });
         renderRequests(requests); // Gelen istek kutularını ekrana çiz
+    }, (error) => {
+        console.error("Bekleyen istekler çekilemedi (Yetki Hatası):", error);
     });
-}
-
-// Bir günün dolu olup olmadığını kontrol eden yardımcı fonksiyon
-function isDayBooked(apart, dateStr) {
-    const dTime = new Date(dateStr).getTime();
-    for (let b of globalApprovedList) {
-        if (b.apart === apart) {
-            let inTime = new Date(b.checkin).getTime();
-            let outTime = new Date(b.checkout).getTime();
-            if (dTime >= inTime && dTime < outTime) return true;
-        }
-    }
-    return false;
 }
 
 // Bir günün dolu olup olmadığını ve kimin dolu olduğunu bulan fonksiyon
@@ -78,13 +79,13 @@ function getBookingForDay(apart, dateStr) {
             let inTime = new Date(b.checkin).getTime();
             let outTime = new Date(b.checkout).getTime();
             // Giriş ile çıkış tarihi arasındaki TÜM GÜNLER (çıkış günü hariç) bu şarta uyar.
-            // 5 günlük rezervasyonsa, 5 günün her biri için bu fonksiyon o müşteriyi döndürür.
             if (dTime >= inTime && dTime < outTime) return b;
         }
     }
     return null;
 }
 
+// Bir günün dolu olup olmadığını kontrol eden yardımcı fonksiyon (Temizlendi)
 function isDayBooked(apart, dateStr) {
     return getBookingForDay(apart, dateStr) !== null;
 }
