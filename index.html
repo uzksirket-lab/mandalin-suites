@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta name="google-site-verification" content="oRTO_PMJvJwcyK7hVAv68d2FJryeVLwqUsE5CRbnkDQ" />
+    <meta name="description" content="Datça'nın kalbinde huzurlu ve konforlu bir tatil keyfi. Mandalin Suites Datça apart otel rezervasyonu için hemen sitemizi ziyaret edin.">
+    <meta name="keywords" content="Datça apart, Palamutbükü apart, Palamutbükü otel, Palamutbükü konaklama, Palamutbükü tatil, Palamutbükü kiralık apart, Datça otel, Datça konaklama, Mandalin Suites, Datça kiralık apart, Datça tatil, Datça suites, Datça apart otel">
+    <meta name="author" content="Mandalin Suites Datça Palamutbükü">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandalin Suites | Datça Palamutbükü</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
+    
+    <style>
+        .flatpickr-calendar.inline {
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: none;
+            width: 100%;
+            max-width: 400px;
+        }
+        .flatpickr-day.available:not(.selected, .startRange, .endRange, .inRange) {
+            background: #e8f5e9;
+            color: #28a745;
+            font-weight: 600;
+            border-color: transparent;
+        }
+        .flatpickr-day.fully-booked {
+            background: #ffebee !important;
+            color: #dc3545 !important;
+            font-weight: bold;
+            text-decoration: line-through;
+            border-color: transparent !important;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="image_d0f303.jpg" alt="Mandalin Suites Logo" class="logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="lang" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+                <li><a href="#about" class="lang" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
+                <li><a href="#gallery" class="lang" data-tr="Galeri" data-en="Gallery">Galeri</a></li>
+                <li><a href="#reviews" class="lang" data-tr="Yorumlar" data-en="Reviews">Yorumlar</a></li>
+                <li><a href="#explore" class="lang" data-tr="Çevre" data-en="Explore">Çevre</a></li>
+                <li><a href="#booking" class="lang" data-tr="Rezervasyon" data-en="Booking">Rezervasyon</a></li>
+                <li><a href="#contact" class="lang" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <button id="btn-tr" class="active">TR</button> | <button id="btn-en">EN</button>
+            <a href="#" id="admin-login-btn" title="Yönetici Girişi"><i class="fas fa-user-lock"></i></a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <a href="https://wa.me/905379145255" class="whatsapp-float" target="_blank" title="WhatsApp'tan Ulaşın">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <section id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('mandalin7.jpg');">
+        <div class="hero-content fade-in">
+            <h1 class="lang" data-tr="Huzura Açılan Kapınız" data-en="Your Gateway to Serenity">Huzura Açılan Kapınız</h1>
+            <p class="lang" data-tr="Datça Palamutbükü'nün eşsiz doğasında, begonviller arasında saklı bir cennet." data-en="A hidden paradise among bougainvilleas in the unique nature of Datça Palamutbükü.">Datça Palamutbükü'nün eşsiz doğasında, begonviller arasında saklı bir cennet.</p>
+            <a href="#booking" class="btn lang" data-tr="Rezervasyon Yap" data-en="Book Now">Rezervasyon Yap</a>
+        </div>
+    </section>
+
+    <section id="about" class="about section-padding">
+        <div class="container layout-grid">
+            <div class="about-text fade-in-left">
+                <h2 class="lang" data-tr="Mandalin Suites'e Hoş Geldiniz" data-en="Welcome to Mandalin Suites">Mandalin Suites'e Hoş Geldiniz</h2>
+                <p class="lang" data-tr="Tesisimiz Datça Palamutbükü'nün muhteşem doğasında, denize sadece 3 dakikalık yürüme mesafesinde yer almaktadır. Zeytin ağaçları ve begonvillerle süslü yemyeşil bahçemiz içinde, misafirlerimize kendilerini evlerinde hissedecekleri huzurlu ve konforlu bir konaklama deneyimi sunuyoruz. Her detayı özenle düşünülmüş apartlarımızda şehrin stresinden uzaklaşıp doğanın sesini dinleyebilirsiniz." data-en="Our facility is located in the magnificent nature of Datça Palamutbükü, just a 3-minute walk from the sea. In our lush garden adorned with olive trees and bougainvilleas, we offer our guests a peaceful and comfortable stay where they will feel at home. You can get away from the stress of the city and listen to the sound of nature in our carefully designed apartments.">Tesisimiz Datça Palamutbükü'nün muhteşem doğasında, denize sadece 3 dakikalık yürüme mesafesinde yer almaktadır. Zeytin ağaçları ve begonvillerle süslü yemyeşil bahçemiz içinde, misafirlerimize kendilerini evlerinde hissedecekleri huzurlu ve konforlu bir konaklama deneyimi sunuyoruz. Her detayı özenle düşünülmüş apartlarımızda şehrin stresinden uzaklaşıp doğanın sesini dinleyebilirsiniz.</p>
+                <ul class="features">
+                    <li><i class="fas fa-home"></i> <span class="lang" data-tr="Toplam 7 Müstakil Apart (1+1)" data-en="Total 7 Detached Apartments (1+1)">Toplam 7 Müstakil Apart (1+1)</span></li>
+                    <li><i class="fas fa-utensils"></i> <span class="lang" data-tr="Tam Donanımlı Mutfak & Ekipmanları" data-en="Fully Equipped Kitchen & Utensils">Tam Donanımlı Mutfak & Ekipmanları</span></li>
+                    <li><i class="fas fa-umbrella-beach"></i> <span class="lang" data-tr="Plaja 3 Dk Mesafe & Kendinize Özel Şezlong" data-en="3 Mins to Beach & Private Sunbeds">Plaja 3 Dk Mesafe & Kendinize Özel Şezlong</span></li>
+                    <li><i class="fas fa-parking"></i> <span class="lang" data-tr="Ücretsiz Özel Otopark" data-en="Free Private Parking">Ücretsiz Özel Otopark</span></li>
+                    <li><i class="fas fa-wifi"></i> <span class="lang" data-tr="Sınırsız Kablosuz İnternet (Wi-Fi)" data-en="Unlimited Free Wi-Fi">Sınırsız Kablosuz İnternet (Wi-Fi)</span></li>
+                    <li><i class="fas fa-leaf"></i> <span class="lang" data-tr="Özel Teras ve Doğayla İç İçe Bahçe" data-en="Private Terrace & Nature Surrounded Garden">Özel Teras ve Doğayla İç İçe Bahçe</span></li>
+                </ul>
+            </div>
+            <div class="about-img fade-in-right">
+                <img src="mandalin1.jpg" alt="Mandalin Suites Bahçe">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery section-padding bg-light">
+        <div class="container text-center fade-in">
+            <h2 class="lang" data-tr="Galeri" data-en="Gallery">Galeri</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="mandalin2.jpg" alt="Mandalin Suites Galeri 1"></div>
+                <div class="gallery-item"><img src="mandalin3.jpg" alt="Mandalin Suites Galeri 2"></div>
+                <div class="gallery-item"><img src="mandalin4.jpg" alt="Mandalin Suites Galeri 3"></div>
+                <div class="gallery-item"><img src="mandalin5.jpg" alt="Mandalin Suites Galeri 4"></div>
+                <div class="gallery-item"><img src="mandalin6.jpg" alt="Mandalin Suites Galeri 5"></div>
+                <div class="gallery-item"><img src="mandalin8.jpg" alt="Mandalin Suites Galeri 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews section-padding bg-light" style="background-color: #f0f4f8;">
+        <div class="container text-center fade-in">
+            <h2 class="lang" data-tr="Misafir Yorumları" data-en="Guest Reviews">Misafir Yorumları</h2>
+            <p class="lang" data-tr="Google üzerinden bizleri değerlendiren değerli misafirlerimizin yorumları." data-en="Reviews from our valued guests who evaluated us on Google.">Google üzerinden bizleri değerlendiren değerli misafirlerimizin yorumları.</p>
+            
+            <div class="review-slider">
+                <div class="review-slide active">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text lang" data-tr="Üç gün için geldiğimiz tatilimizi beş güne çıkartacak kadar şirin güzel bir yer. Çok memnun kaldık, bahçesi muazzam güzel, bungalov içinde ihtiyacınızı giderebileceğiz tüm malzemeler var. Misafirperverliği için Levet Bey ve Neşe Hanıma ayrıca teşekkür ederim." data-en="We came for three days for our vacation for five days to increase our vacation is a beautiful place. We were very pleased, the garden is tremendously beautiful, there are all the materials you need in the bungalow. I would also like to thank Mr. Levet and Ms. Neşe for their hospitality.">"Üç gün için geldiğimiz tatilimizi beş güne çıkartacak kadar şirin güzel bir yer. Çok memnun kaldık, bahçesi muazzam güzel, bungalov içinde ihtiyacınızı giderebileceğiz tüm malzemeler var. Misafirperverliği için Levet Bey ve Neşe Hanıma ayrıca teşekkür ederim."</p>
+                    <h4 class="review-author">- Reşit C.</h4>
+                </div>
+
+                <div class="review-slide">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text lang" data-tr="Her şeyiyle harika bir yer. Denize yürüme 2 dk , deniz alanında kendilerine ait şemsiye ve şezlongları mevcut. Huzurla akşam bahçenizde oturup yemeğinizi yiyip çayınızı içebilirsiniz. Levent beye ve eşine çok teşekkür ederiz. Eşimle çok memnun kaldık. Gelmek isterseniz mutlaka Mandalin’i değerlendirebilirsiniz! akşam ve gündüz halini ekledim mis gibi ortam!" data-en="A great place with everything. 2 minutes walk to the sea, there are their own umbrellas and sun loungers in the sea area. You can sit peacefully in the evening in your garden, eat your dinner and drink your tea. Thank you very much to Mr. Levent and his wife. We were very satisfied with my wife. If you want to come, you can definitely evaluate Mandalin! I added the evening and daytime version of the environment like a mis mis mis!">"Her şeyiyle harika bir yer. Denize yürüme 2 dk , deniz alanında kendilerine ait şemsiye ve şezlongları mevcut. Huzurla akşam bahçenizde oturup yemeğinizi yiyip çayınızı içebilirsiniz. Levent beye ve eşine çok teşekkür ederiz. Eşimle çok memnun kaldık. Gelmek isterseniz mutlaka Mandalin’i değerlendirebilirsiniz! akşam ve gündüz halini ekledim mis gibi ortam!"</p>
+                    <h4 class="review-author">- Merve A.</h4>
+                </div>
+
+                <div class="review-slide">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text lang" data-tr="Mandalin Suites'te harika bir hafta sonu geçirdik. Begonviller arasındaki bahçesi and odaların temizliği mükemmeldi. Kesinlikle tekrar geleceğiz!" data-en="We had a wonderful weekend at Mandalin Suites. The garden among the bougainvillea and the cleanliness of the rooms were perfect. We will definitely come back!">"Mandalin Suites'te harika bir hafta sonu geçirdik. Begonviller arasındaki bahçesi ve odaların temizliği mükemmeldi. Kesinlikle tekrar geleceğiz!"</p>
+                    <h4 class="review-author">- Ayşe & Mehmet T.</h4>
+                </div>
+
+                <div class="review-slide">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text lang" data-tr="Palamutbükü sahilinde kendimize ait şezlonglarımızın olması büyük avantaj. Sessiz, sakin ve huzurlu bir ortam arayanlar için ideal bir butik otel." data-en="Having our own sunbeds on Palamutbükü beach is a huge advantage. An ideal boutique hotel for those looking for a quiet, calm and peaceful environment.">"Palamutbükü sahilinde kendimize ait şezlonglarımızın olması büyük avantaj. Sessiz, sakin ve huzurlu bir ortam arayanlar için ideal bir butik otel."</p>
+                    <h4 class="review-author">- Canan B.</h4>
+                </div>
+
+                <div class="review-slide">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text lang" data-tr="Odalardaki mutfak çok kullanışlıydı, 1+1 yapısı sayesinde kendi evimizde gibi hissettik. İşletmecileri çok sıcakkanlı. Teşekkürler Mandalin Suites." data-en="The kitchen in the rooms was very useful, we felt right at home thanks to its 1+1 structure. The operators are very friendly. Thank you Mandalin Suites.">"Odalardaki mutfak çok kullanışlıydı, 1+1 yapısı sayesinde kendi evimizde gibi hissettik. İşletmecileri çok sıcakkanlı. Teşekkürler Mandalin Suites."</p>
+                    <h4 class="review-author">- Burak Y.</h4>
+                </div>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="explore" class="section-padding">
+        <div class="container text-center fade-in">
+            <h2 class="lang" data-tr="Çevredeki Koylar & Keşif" data-en="Nearby Bays & Explore">Çevredeki Koylar & Keşif</h2>
+            <p class="lang" data-tr="Datça'nın eşsiz doğasını ve tesisimize yakın harika yerleri keşfedin." data-en="Discover the unique nature of Datça and the wonderful places close to our facility.">Datça'nın eşsiz doğasını ve tesisimize yakın harika yerleri keşfedin.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px;">
+                
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fas fa-sun" style="font-size: 2.5rem; color: #ff9800; margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px; color: #333;">Ovabükü Koyu</h3>
+                        <p class="lang" data-tr="Geniş sahili ve berrak deniziyle huzurlu bir koy." data-en="A peaceful bay with its wide beach and clear sea." style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Geniş sahili ve berrak deniziyle huzurlu bir koy.</p>
+                    </div>
+                    <div class="map-embed" style="border-radius: 8px; overflow: hidden; margin-top: 10px;">
+                        <iframe src="https://maps.google.com/maps?q=Ovabükü+Datça&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fas fa-ship" style="font-size: 2.5rem; color: #0288d1; margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px; color: #333;">Hayıtbükü Koyu</h3>
+                        <p class="lang" data-tr="Kapalı bir koy olduğu için dalgasız, sığ ve kumlu harika bir plaj." data-en="A wonderful wave-free, shallow and sandy beach as it is a closed bay." style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Kapalı bir koy olduğu için dalgasız, sığ ve kumlu harika bir plaj.</p>
+                    </div>
+                    <div class="map-embed" style="border-radius: 8px; overflow: hidden; margin-top: 10px;">
+                        <iframe src="https://maps.google.com/maps?q=Hayıtbükü+Datça&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fas fa-fish" style="font-size: 2.5rem; color: #009688; margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px; color: #333;">Kurubükü Koyu</h3>
+                        <p class="lang" data-tr="Turkuaz rengi suyuyla adeta doğal bir akvaryum." data-en="Almost a natural aquarium with its turquoise water." style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Turkuaz rengi suyuyla adeta doğal bir akvaryum.</p>
+                    </div>
+                    <div class="map-embed" style="border-radius: 8px; overflow: hidden; margin-top: 10px;">
+                        <iframe src="https://maps.google.com/maps?q=Kurubükü+Datça&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fas fa-monument" style="font-size: 2.5rem; color: #795548; margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px; color: #333;">Knidos Antik Kenti ve Gıyrap Koyu</h3>
+                        <p class="lang" data-tr="Ege ile Akdeniz'in birleştiği noktada tarihi ve doğal bir güzellik." data-en="A historical and natural beauty at the point where the Aegean and the Mediterranean meet." style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Ege ile Akdeniz'in birleştiği noktada tarihi ve doğal bir güzellik.</p>
+                    </div>
+                    <div class="map-embed" style="border-radius: 8px; overflow: hidden; margin-top: 10px;">
+                        <iframe src="https://maps.google.com/maps?q=Knidos+Antik+Kenti+Datça&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fas fa-tree" style="font-size: 2.5rem; color: #4caf50; margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px; color: #333;">Gerence Koyu</h3>
+                        <p class="lang" data-tr="Akvaryum gibi berrak deniziyle çam ağaçlarının arasında gizli bir cennet." data-en="A hidden paradise among pine trees with its aquarium-like clear sea." style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Akvaryum gibi berrak deniziyle çam ağaçlarının arasında gizli bir cennet.</p>
+                    </div>
+                    <div class="map-embed" style="border-radius: 8px; overflow: hidden; margin-top: 10px;">
+                        <iframe src="https://maps.google.com/maps?q=Gerence+Koyu+Datça&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fas fa-campground" style="font-size: 2.5rem; color: #8d6e63; margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px; color: #333;">Bağlarözü Koyu</h3>
+                        <p class="lang" data-tr="Sakin, bakir ve doğayla baş başa kalabileceğiniz huzurlu bir koy." data-en="A calm, untouched and peaceful bay where you can be alone with nature." style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Sakin, bakir ve doğayla baş başa kalabileceğiniz huzurlu bir koy.</p>
+                    </div>
+                    <div class="map-embed" style="border-radius: 8px; overflow: hidden; margin-top: 10px;">
+                        <iframe src="https://maps.google.com/maps?q=Bağlarözü+Koyu+Datça&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="section-padding" style="background-color: #fff;">
+        <div class="container text-center fade-in">
+            <h2 class="lang" data-tr="Müsaitlik ve Rezervasyon" data-en="Availability & Reservation">Müsaitlik ve Rezervasyon</h2>
+            <p class="lang" data-tr="Yeşil günler uygun, kırmızı günler ise tüm apartlarımızın (7) dolu olduğunu gösterir." data-en="Green days are available, red days indicate all our apartments (7) are fully booked.">Yeşil günler uygun, kırmızı günler ise tüm apartlarımızın (7) dolu olduğunu gösterir.</p>
+            
+            <form id="reservation-form" style="max-width: 600px; margin: 40px auto; text-align: left; background: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <label style="font-weight: 600; display:block; margin-bottom: 10px;" class="lang" data-tr="Giriş ve Çıkış Tarihinizi Seçin:" data-en="Select Check-in and Check-out Dates:">Giriş ve Çıkış Tarihinizi Seçin:</label>
+                    <input type="text" id="booking-dates" required style="display: none;">
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label style="font-weight: 600;" class="lang" data-tr="Adınız ve Soyadınız:" data-en="Name and Surname:">Adınız ve Soyadınız:</label>
+                    <input type="text" id="booking-name" placeholder="Örn: Ahmet Yılmaz" style="width:100%; padding:10px; margin-top:5px; border-radius:5px; border:1px solid #ccc;" required>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label style="font-weight: 600;" class="lang" data-tr="Telefon Numaranız:" data-en="Phone Number:">Telefon Numaranız:</label>
+                    <input type="tel" id="booking-phone" placeholder="05xx xxx xx xx" style="width:100%; padding:10px; margin-top:5px; border-radius:5px; border:1px solid #ccc;" required>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="font-weight: 600;" class="lang" data-tr="E-posta Adresiniz:" data-en="E-mail Address:">E-posta Adresiniz:</label>
+                    <input type="email" id="booking-email" placeholder="ornek@mail.com" style="width:100%; padding:10px; margin-top:5px; border-radius:5px; border:1px solid #ccc;" required>
+                </div>
+
+                <button type="submit" class="btn lang" style="width: 100%; border: none; cursor: pointer;" data-tr="Rezervasyon İsteği Gönder" data-en="Send Request">Rezervasyon İsteği Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding bg-light">
+        <div class="container text-center fade-in">
+            <h2 class="lang" data-tr="Bize Ulaşın & Konum" data-en="Contact Us & Location">Bize Ulaşın & Konum</h2>
+            <div class="contact-info">
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3 class="lang" data-tr="Adres" data-en="Address">Adres</h3>
+                    <p>Cumalı, Palamutbükü sokak no:117<br>48900 Datça/Muğla</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <h3 class="lang" data-tr="Telefon / WhatsApp" data-en="Phone / WhatsApp">Telefon / WhatsApp</h3>
+                    <p><a href="tel:+905379145255" style="text-decoration: none; color: inherit; font-weight: 600;">0537 914 52 55</a></p>
+                </div>
+            </div>
+            
+            <div class="map-container" style="margin-top: 50px;">
+                <a href="https://maps.google.com/?q=Cumalı,+Palamutbükü+sokak+no:117,+48900+Datça/Muğla" target="_blank" title="Google Haritalar'da Aç">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1182.3006714674218!2d27.499498980958137!3d36.672648355715594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be1e4d7971766d%3A0x66a14fea51a7cb95!2sMandalin%20Suites!5e0!3m2!1sen!2str!4v1783752612179!5m2!1sen!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h3>Yönetici Girişi</h3>
+            <input type="text" id="admin-user" placeholder="Kullanıcı Mail Adresi">
+            <input type="password" id="admin-pass" placeholder="Şifre">
+            <button id="admin-submit" class="btn" style="width: 100%; border: none;">Giriş Yap</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Mandalin Suites. <span class="lang" data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/tr.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

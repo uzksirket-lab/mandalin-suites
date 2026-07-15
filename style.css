@@ -1,0 +1,497 @@
+/* CSS Değişkenleri & Reset */
+:root {
+    --primary-color: #f46b30; /* Logodaki turuncu tonu */
+    --text-dark: #222;
+    --text-light: #fff;
+    --bg-light: #f9f9f9;
+    --bg-dark: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-dark);
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+    height: 60px;
+    border-radius: 50%; /* Logonun yuvarlak hatlarını korumak için */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.lang-switch button.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax efekti */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #d15622;
+    transform: translateY(-3px);
+}
+
+/* Sections & Typography */
+.section-padding {
+    padding: 100px 5%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+/* About Layout */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.features {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.features li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.features i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Hover efekti */
+}
+
+/* Contact */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.info-box i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark);
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Scroll Animations (JavaScript tetikler) */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-in-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-in-right { opacity: 0; transform: translateX(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.visible { opacity: 1; transform: translate(0); }
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-dark);
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .layout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+/* --- YÖNETİCİ GİRİŞ PENCERESİ (MODAL) --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.6); 
+    align-items: center; 
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff; 
+    padding: 40px 30px; 
+    border-radius: 12px; 
+    width: 90%;
+    max-width: 350px; 
+    text-align: center; 
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    position: absolute; 
+    right: 15px; 
+    top: 10px; 
+    font-size: 28px; 
+    cursor: pointer; 
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.close-modal:hover { color: #333; }
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.modal-content input {
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#admin-login-btn {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#admin-login-btn:hover {
+    color: var(--primary-color);
+}
+/* --- YORUMLAR (SLIDER) ALANI --- */
+.review-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto 10px;
+    min-height: 220px; 
+}
+
+.review-slide {
+    display: none;
+    animation: fadeEffect 1s ease-in-out;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.review-slide.active {
+    display: block;
+}
+
+.quote-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    opacity: 0.2;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #ffc107;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.review-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.review-author {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.dot.active, .dot:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.3; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+/* --- WHATSAPP FLOATING BUTTON --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20b858;
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+/* --- Mobilde Ana Ekran Resmi Düzeltmesi --- */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+}
+/* --- ADMİN MODAL ÇAKIŞMA ÖNLEYİCİ GÜNCELLEME --- */
+
+/* Tüm harita katmanlarını, çerçeveleri ve harita kapsayıcılarını zemin katmanına (z-index: 1) sabitliyoruz */
+#map, 
+.map-container, 
+iframe, 
+.map-wrapper,
+[id*="map"],
+[class*="map"] {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Yönetici Giriş Modalı (Zemin üstü ana perde) */
+.modal, 
+#admin-modal {
+    display: none; 
+    position: fixed !important; 
+    z-index: 2000000000 !important; /* Maksimum katman seviyesi */
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.7) !important; 
+    align-items: center; 
+    justify-content: center;
+    pointer-events: auto !important; /* Tıklamaları yakala */
+}
+
+/* Beyaz Giriş Kutusu (İçerik) */
+.modal-content {
+    background-color: #fff !important; 
+    padding: 40px 30px; 
+    border-radius: 12px; 
+    width: 90%;
+    max-width: 350px; 
+    text-align: center; 
+    position: relative !important;
+    z-index: 2000000001 !important; /* Perdenin de bir tık üstü */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    pointer-events: auto !important; /* İçindeki input tıklamalarını kesin çalıştır */
+}
+
+/* Input kutularına odaklanıldığında tarayıcı haritayla etkileşime girmesin */
+.modal-content input {
+    position: relative !important;
+    z-index: 2000000002 !important;
+    pointer-events: auto !important;
+}
